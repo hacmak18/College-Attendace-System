@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Faculty.master.cs" Inherits="Professor_Faculty" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="logo">
+                                <h1><a href="phome.aspx" style="color: #428BCA">Faculty </a></h1>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-2">
+                            <div class="navbar" role="banner">
+                                <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+                                    <ul class="nav navbar-nav" style="background-color: #ffffff">
+                                        <li class="dropdown">
+                                            <asp:Button ID="Asignout" runat="server" Text="Sign out " CssClass="btn btn-primary " Height="30px" Style="margin: 10px" OnClick="signout_click" />
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2" style="background-color: brown;margin-top:1%">
+                <div class="sidebar content-box">
+                    <ul class="nav" style="position: static">
+                        <!-- Main menu -->
+                        <li><a href="phome.aspx" style="color:#ffffff"><i class="glyphicon glyphicon-home"></i>Home</a></li>
+                        <li><a href="add_student.aspx" style="color:#ffffff"><i class="glyphicon glyphicon-calendar"></i>Add student</a></li>
+                        <li><a href="students.aspx" style="color:#ffffff"><i class="glyphicon glyphicon-user"></i>Manage Students</a></li>
+                        <li><a href="projectgroup.aspx" style="color:#ffffff"><i class="glyphicon glyphicon-tower"></i>Project group</a></li>
+                        <li><a href="padd_defination.aspx" style="color:#ffffff"><i class="glyphicon glyphicon-bookmark"></i>Add Defination</a></li>
+                       <%-- <li><a href="transaction_table.aspx" style="color:#ffffff"><i class="glyphicon glyphicon-transfer"></i>Available defination</a></li>--%>
+                        <li><a href="active_defination.aspx" style="color:#ffffff"><i class="glyphicon glyphicon-transfer"></i>Active definations</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer style="margin-top:20%;margin-left:12%">
+                <div class="container" style="height: 25px">
+                    <div style="margin-left: 30%; color: black; font-weight: bolder">
+                        Designed by the student of the IT 5th semester
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </form>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#form1').bValidator();
+        });
+    </script>
+</body>
+</html>
